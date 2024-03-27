@@ -1,11 +1,6 @@
 <template>
   <nav class="flex justify-between px-12 py-5" style="background: rgba(33, 36, 53, 0.9); color: #fff">
-    <div class="flex items-center gap-4">
-      <img src="/img/logo.png" alt="VueSchool logo">
-      <a href="" class="w-min text-lg font-bold">
-        Vue School.io
-      </a>
-    </div>
+    <Logo class="text-lg" />
     <div class="flex gap-5 items-center">
       <div>Courses</div>
       <a>Plans</a>
