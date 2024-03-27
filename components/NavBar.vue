@@ -1,6 +1,6 @@
 <template>
-  <nav class="flex justify-between px-12 py-5" style="background: rgba(33, 36, 53, 0.9); color: #fff">
-    <Logo class="text-lg" />
+  <nav class="flex justify-between px-12 py-5" style="background: #212435; color: #fff">
+    <Logo class="text-lg" style="height: 56px;"/>
     <div class="flex gap-5 items-center">
       <div>Courses</div>
       <a>Plans</a>

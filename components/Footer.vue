@@ -2,7 +2,7 @@
   <footer class="grid grid-cols-2"
     style="background: #212435; color: #fff; gap: 10em; padding: 6em 8em;">
     <div>
-      <Logo class="text-4xl" />
+      <Logo class="text-4xl" style="height: 90px"/>
       <div style="margin: 4em 0;">
         Thanks to fine people like you, Vue School can proudly sponsor Evan and the
         future of Vue.js by being a Platinum Patreon
@@ -11,7 +11,7 @@
         <span style="color: rgba(115, 123, 152, 1); font-size: 22px;">
           FOLLOW US IN SOCIAL MEDIA
         </span>
-        <div class="flex gap-10 my-8">
+        <div class="flex justify-between my-8">
             <SocialMediaIcon icon="facebook" />
             <SocialMediaIcon icon="twitter" />
             <SocialMediaIcon icon="github" />
@@ -28,6 +28,7 @@
         <FooterLinks v-for="info, i in siteInfo.slice(3)" :key="i" v-bind="info" />
       </div>
     </div>
+
   </footer>
 </template>
 

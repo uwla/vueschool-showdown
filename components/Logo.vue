@@ -1,6 +1,7 @@
 <template>
-  <div class="flex items-center gap-4">
-    <img src="/img/logo.png" alt="VueSchool logo">
+  <div class="flex items-center gap-6">
+    <img src="/img/logo.svg" alt="VueSchool logo"
+    style="max-width: 100%; max-height: 100%;">
     <a href="" class="w-min font-bold" v-if="showText">
       Vue School.io
     </a>
@@ -9,11 +10,17 @@
 
 <script>
 export default {
-   props: {
+  props: {
     showText: {
       type: Boolean,
       default: true,
+    },
+    width: {
+      default: 'auto'
+    },
+    height: {
+      default: 'auto'
     }
-   }
+  }
 }
 </script>
