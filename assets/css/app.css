@@ -44,3 +44,31 @@ body {
 .wmax-1300 {
   max-width: 1300px;
 }
+
+.nowrap {
+  white-space: nowrap;
+}
+
+button, .v-dropdown-menu__trigger {
+  cursor: pointer;
+}
+
+.v-dropdown-menu__trigger::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+.v-dropdown-menu__container {
+  max-width: unset !important;
+  min-width: unset !important;
+  background: none !important;
+  border: none !important;
+  width: auto;
+  margin-top: 0.25em;
+}
