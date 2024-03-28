@@ -41,7 +41,7 @@
       <a href="#"><img src="/img/icon-google-grey.svg" alt="Google"></a>
     </div>
   </div>
-  <div class="py-20" style="background: linear-gradient(to bottom, #254551, #212435);">
+  <div class="pt-20 pb-10" style="background: linear-gradient(to bottom, #254551, #212435);">
     <div class="grid grid-cols-2 wmax-1200 mx-auto white gap-5 my-10">
       <div>
         <h3 class="green-to-aqua" style="font-size: 22px;">
@@ -76,20 +76,17 @@
       </div>
     </div>
   </div>
-  <div class="white py-5"
-    style="background: url('/img/curve-2.svg'), url('/img/curve-1.svg'),  #212435;
+  <div class="white py-5" style="background: url('/img/curve-2.svg'), url('/img/curve-1.svg'),  #212435;
       background-size: 100%, 100%, 100%; background-position: center, bottom, top;
-      background-repeat: no-repeat, no-repeat, no-repeat; padding-top: 6em;
-    "
-    >
+      background-repeat: no-repeat, no-repeat, no-repeat; padding-top: 5em;
+    ">
     <h1 class="font-bold text-center" style="font-size: 60px; margin-bottom: 2.5em; line-height: 1.2;">
       Discounted <span class="aqua">Corporate</span> <br> <span class="green-to-aqua">Training</span> Bundles
     </h1>
-    <div class="flex justify-center gap-8 items-start" >
+    <div class="flex justify-center gap-8 items-start">
       <ProductPlan v-bind="basicPlan" />
       <ProductPlan v-bind="professionalPlan">
-        <div class="flex items-center py-3 px-5 gap-3"
-          style="background: #245355; border-radius: .7em">
+        <div class="flex items-center py-3 px-5 gap-3" style="background: #245355; border-radius: .7em">
           <img src="/img/vue3-masterclass-course.png">
           <div class="font-semibold" style="line-height: 1.5">
             <span style="color: rgb(160, 168, 195)">Enough time to watch:</span><br>
@@ -100,6 +97,21 @@
       <ProductPlan v-bind="basicPlan2" />
     </div>
   </div>
+  <div class="py-20" style="background: #212435; color: #fff;">
+    <div class="mx-auto mt-5" style="max-width: 1150px">
+      <div class="flex justify-between">
+        <h2 class="text-6xl font-bold">Available Workshops</h2>
+        <ButtonGreen class="text-sm px-10">
+          See all the workshops
+        </ButtonGreen>
+      </div>
+      <div class="overflow-auto my-20">
+        <div class="flex gap-10 items-stretch" style="width: fit-content;">
+          <WorkshopCard v-for="workshop,i in workshops" :key="i" v-bind="workshop" />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -107,13 +119,13 @@ const basicPlan = {
   title: 'Basic',
   icon: 'leaf',
   active: [
-    {label: 'All Video Courses' },
-    {label: 'Vue.Js Master Classes' },
-    {label: 'Developer assist Slack channel' },
+    { label: 'All Video Courses' },
+    { label: 'Vue.Js Master Classes' },
+    { label: 'Developer assist Slack channel' },
   ],
   inactive: [
-    {label: 'Live Weekly QnA' },
-    {label: '1 x ws ticker per license' },
+    { label: 'Live Weekly QnA' },
+    { label: '1 x ws ticker per license' },
   ]
 }
 
@@ -121,13 +133,13 @@ const professionalPlan = {
   title: 'Professional',
   icon: 'rocket',
   active: [
-    {label: 'All Video Courses' },
-    {label: 'Vue.Js Master Classes' },
-    {label: 'Developer assist Slack channel' },
+    { label: 'All Video Courses' },
+    { label: 'Vue.Js Master Classes' },
+    { label: 'Developer assist Slack channel' },
   ],
   activeBold: [
-    {label: 'Live Weekly QnA' },
-    {label: '1 x ws ticker per license' },
+    { label: 'Live Weekly QnA' },
+    { label: '1 x ws ticker per license' },
   ]
 }
 
@@ -135,13 +147,43 @@ const basicPlan2 = {
   title: 'Basic',
   icon: 'thunderbolt',
   active: [
-    {label: 'All Video Courses' },
-    {label: 'Vue.Js Master Classes' },
-    {label: 'Developer assist Slack channel' },
-    {label: 'Live Weekly QnA' },
+    { label: 'All Video Courses' },
+    { label: 'Vue.Js Master Classes' },
+    { label: 'Developer assist Slack channel' },
+    { label: 'Live Weekly QnA' },
   ],
   activeBold: [
-    {label: '4 x Virtual Workshop of your choice' },
+    { label: '4 x Virtual Workshop of your choice' },
   ]
 }
+
+const workshops = [
+  {
+    authorImgUrl: '/img/person-steve.jpg',
+    authorName: 'Steve Popoola',
+    date: 'December 14th - 11:00 AM (GMT-3)',
+    description: 'A progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally...',
+    duration: '15 Hours',
+    title: 'Vue.js Fundamentals',
+    videoType: 'LIVE Training',
+  },
+  {
+    authorImgUrl: '/img/person-steve.jpg',
+    authorName: 'Steve Popoola',
+    date: 'December 14th - 11:00 AM (GMT-3)',
+    description: 'Take a deep dive into the new and exciting features of Vue 3. Learn about Portals, Suspense, Composition API, Fragments, and much much more...',
+    duration: '15 Hours',
+    title: 'Vue 3 and Composition API',
+    videoType: 'LIVE Training',
+  },
+  {
+    authorImgUrl: '/img/person-steve.jpg',
+    authorName: 'Steve Popoola',
+    date: 'December 14th - 11:00 AM (GMT-3)',
+    description: 'Take a deep dive into the new and exciting features of Vue 3. Learn about Portals, Suspense, Composition API, Fragments, and much much more...',
+    duration: '15 Hours',
+    title: 'Vue 3 and Composition API',
+    videoType: 'LIVE Training',
+  },
+]
 </script>
