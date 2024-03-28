@@ -42,7 +42,7 @@
     </div>
   </div>
   <div class="py-20" style="background: linear-gradient(to bottom, #254551, #212435);">
-    <div class="grid grid-cols-2 wmax-1200 mx-auto white gap-5">
+    <div class="grid grid-cols-2 wmax-1200 mx-auto white gap-5 my-10">
       <div>
         <h3 class="green-to-aqua" style="font-size: 22px;">
           YOUR #1 SOURCE OF VUE.JS COURSES
@@ -76,9 +76,72 @@
       </div>
     </div>
   </div>
-  <div class="white py-20" style="background: #212435">
-    <h1 class="font-bold text-center" style="font-size: 50px;">
+  <div class="white py-5"
+    style="background: url('/img/curve-2.svg'), url('/img/curve-1.svg'),  #212435;
+      background-size: 100%, 100%, 100%; background-position: center, bottom, top;
+      background-repeat: no-repeat, no-repeat, no-repeat; padding-top: 6em;
+    "
+    >
+    <h1 class="font-bold text-center" style="font-size: 60px; margin-bottom: 2.5em; line-height: 1.2;">
       Discounted <span class="aqua">Corporate</span> <br> <span class="green-to-aqua">Training</span> Bundles
     </h1>
+    <div class="flex justify-center gap-8 items-start" >
+      <ProductPlan v-bind="basicPlan" />
+      <ProductPlan v-bind="professionalPlan">
+        <div class="flex items-center py-3 px-5 gap-3"
+          style="background: #245355; border-radius: .7em">
+          <img src="/img/vue3-masterclass-course.png">
+          <div class="font-semibold" style="line-height: 1.5">
+            <span style="color: rgb(160, 168, 195)">Enough time to watch:</span><br>
+            <span class="text-lg">The Vue3 Masterclass</span>
+          </div>
+        </div>
+      </ProductPlan>
+      <ProductPlan v-bind="basicPlan2" />
+    </div>
   </div>
 </template>
+
+<script setup>
+const basicPlan = {
+  title: 'Basic',
+  icon: 'leaf',
+  active: [
+    {label: 'All Video Courses' },
+    {label: 'Vue.Js Master Classes' },
+    {label: 'Developer assist Slack channel' },
+  ],
+  inactive: [
+    {label: 'Live Weekly QnA' },
+    {label: '1 x ws ticker per license' },
+  ]
+}
+
+const professionalPlan = {
+  title: 'Professional',
+  icon: 'rocket',
+  active: [
+    {label: 'All Video Courses' },
+    {label: 'Vue.Js Master Classes' },
+    {label: 'Developer assist Slack channel' },
+  ],
+  activeBold: [
+    {label: 'Live Weekly QnA' },
+    {label: '1 x ws ticker per license' },
+  ]
+}
+
+const basicPlan2 = {
+  title: 'Basic',
+  icon: 'thunderbolt',
+  active: [
+    {label: 'All Video Courses' },
+    {label: 'Vue.Js Master Classes' },
+    {label: 'Developer assist Slack channel' },
+    {label: 'Live Weekly QnA' },
+  ],
+  activeBold: [
+    {label: '4 x Virtual Workshop of your choice' },
+  ]
+}
+</script>
