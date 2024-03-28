@@ -1,5 +1,5 @@
 <template>
-  <div class="px-5 py-6 text-xs" style="border-radius: 2em; background: #293246; width: 25%">
+  <div class="px-5 py-6 text-xs product-plan" style="border-radius: 2em; background: #293246;">
     <h3 class="mb-5 flex gap-3 items-center text-lg font-bold">
       <img :src="`/img/icon-${icon}.svg`" alt="basic plan icon">
       {{  title }}
@@ -40,6 +40,9 @@
             :tooltipStyle="{ backgroundColor: '#0bd88f', color: '#fff' }"
             v-model="value"
           />
+          <div class="flex justify-between grey">
+            <span>5</span><span>20</span>
+          </div>
         </client-only>
       </div>
       <div class="grid grid-cols-2 items-center text-xl mt-4">

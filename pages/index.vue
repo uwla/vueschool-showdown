@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 items-center gap-14" id="hero-banner">
+  <div class="grid-cols-2 items-center gap-14" id="hero-banner">
     <div>
       <h2 class="font-bold" style="font-size: 60px; line-height: 1.25;">
         Complete <span class="green">Vue.js training</span> solutions for
@@ -10,17 +10,15 @@
         with developers using or who are considering using the Vue.js
         framework
       </p>
-      <ButtonGreen class="px-10">
-        Talk to sales
-      </ButtonGreen>
+      <ButtonGreen class="px-10 call-to-action">Talk to sales</ButtonGreen>
     </div>
     <img src="/img/people.png" alt="People using Vue">
   </div>
-  <div id="corporate-training-info">
+  <div id="corporate-training">
     <div class="flex white py-14 px-7 gap-7 justify-center items-center mx-auto wmax-1200"
       style="background: #2a2f43; border-radius: 1em;">
       <Logo class="mx-14 shrink-0" :showText="false" />
-      <div>
+      <div class="corporate-training-about">
         <h2 class="font-bold mb-4" style="font-size: 35px;">About Vue School corporate training</h2>
         <p style="font-size: 22px;">
           School is the #1 training resource for Vue.js and has provided the
@@ -30,14 +28,14 @@
         </p>
       </div>
     </div>
-    <div class="flex justify-between wmax-1200 mx-auto mt-14 ">
+    <div class="justify-between wmax-1200 mx-auto mt-14 featured-companies">
       <a href="#" v-for="i in [1, 2, 3, 4, 5, 6]" :key="i">
         <img src="/img/icon-google-grey.svg" alt="Google">
       </a>
     </div>
   </div>
   <div class="pt-20 pb-10" id="course-metrics">
-    <div class="grid grid-cols-2 wmax-1200 mx-auto white gap-5 my-10">
+    <div class="grid-cols-2 wmax-1200 mx-auto white gap-5 my-10">
       <div>
         <h3 class="green-to-aqua" style="font-size: 22px;">
           YOUR #1 SOURCE OF VUE.JS COURSES
@@ -57,7 +55,7 @@
     <h1 class="font-bold text-center">
       Discounted <span class="aqua">Corporate</span> <br> <span class="green-to-aqua">Training</span> Bundles
     </h1>
-    <div class="flex justify-center gap-8 items-start">
+    <div class="flex justify-center gap-8 items-start product-plans">
       <product-plan v-bind="basicPlan" />
       <product-plan v-bind="professionalPlan">
         <course-card-preview imgUrl="/img/vue3-masterclass-course.png">
@@ -68,17 +66,13 @@
       <product-plan v-bind="basicPlan2" />
     </div>
   </div>
-  <div class="py-20" id="workshops">
-    <div class="flex justify-between" style="margin: 0 6em;">
-      <h2 class="text-6xl font-bold">Available Workshops</h2>
-      <button-green class="text-sm px-10">
-        See all the workshops
-      </button-green>
-    </div>
-    <div class="my-20" style="padding-left: 6em;">
-      <div class="flex gap-10 items-stretch overflow-hidden" v-dragscroll style="padding-right: 6em">
-        <workshop-card v-for="workshop, i in workshops" :key="i" v-bind="workshop" class="shrink-0" />
-      </div>
+  <div class="py-20 flex justify-between pl-20 flex-wrap w-full" id="workshops">
+    <h2 class="text-6xl font-bold">Available Workshops</h2>
+    <button-green class="text-sm px-10 mr-20 call-to-action">
+      See all the workshops
+    </button-green>
+    <div class="mt-20 flex gap-10 items-stretch overflow-hidden w-full pr-20" v-dragscroll>
+      <workshop-card v-for="workshop, i in workshops" :key="i" v-bind="workshop" class="shrink-0" />
     </div>
   </div>
 </template>

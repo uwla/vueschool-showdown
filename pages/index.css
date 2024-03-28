@@ -1,20 +1,74 @@
+/* hero banner */
+
 #hero-banner {
   background: #212435;
   color: #fff;
-  padding: 3em 2em 0 8em;
 }
 
-#course-metrics {
-  background: linear-gradient(to bottom, #233242, #212435);
+@media screen and (max-width: 1049px) {
+  #hero-banner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4em;
+    text-align: center;
+  }
 }
 
-#corporate-training-info {
+@media screen and (min-width: 1050px) {
+  #hero-banner {
+    display: grid;
+    padding: 3em 2em 0 8em;
+  }
+}
+
+/* corporate training */
+
+#corporate-training {
   background: url("/img/curve-2.svg"), url("/img/curve-1.svg"), #212435;
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 100%, 100%, 100%;
-  padding: 9em 0 2em 0;
+  padding: 9em 4em 2em 4em;
   margin-top: -3em;
 }
+
+/* courses' metrics */
+
+#course-metrics {
+  background: linear-gradient(to bottom, #233242, #212435);
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+@media screen and (max-width: 1099px) {
+  #course-metrics > div {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  #corporate-training {
+    padding-bottom: 5em;
+  }
+
+  .featured-companies {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  #course-metrics > div {
+    display: grid;
+    max-width: 1200px;
+  }
+
+  .featured-companies {
+    display: flex;
+  }
+}
+
+/* training bundle */
 
 #training-bundle {
   background: url("/img/curve-2.svg"), url("/img/curve-1.svg"), #212435;
@@ -30,7 +84,46 @@
   line-height: 1.2;
 }
 
+@media screen and (max-width: 899px) {
+  #training-bundle .product-plans {
+    flex-direction: column;
+    padding: 0 5em;
+  }
+
+  #training-bundle .product-plan {
+    width: 100%;
+    padding: 4em 3em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #training-bundle .product-plans {
+    flex-direction: row;
+  }
+
+  #training-bundle .product-plan {
+    width: 25%;
+  }
+}
+
+/* workshops */
+
 #workshops {
   background: #212435;
   color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  #workshops {
+    justify-content: center;
+    gap: 4em;
+  }
+
+  #workshops div {
+    margin-top: 0;
+  }
+
+  #workshops .call-to-action {
+    order: 3;
+  }
 }
