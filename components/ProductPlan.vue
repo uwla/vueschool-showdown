@@ -34,7 +34,7 @@
         <span class="font-bold mb-5 block" style="font-size: 130%">How many licenses do you need?</span>
         <client-only>
           <vue-slider
-          min="5" max="20"
+            :min="5" :max="20"
             :processStyle="{ backgroundColor: '#0bd88f' }"
             :dotStyle="{ color: '#0bd88f' }"
             :tooltipStyle="{ backgroundColor: '#0bd88f', color: '#fff' }"

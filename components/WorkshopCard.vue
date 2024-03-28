@@ -1,5 +1,5 @@
 <template>
-  <div style="width: 600px; height: 100%">
+  <div style="width: 580px; height: 100%">
     <div class="px-8 py-4 flex items-center gap-3 font-semibold" style="background: linear-gradient(90deg, rgba(79, 8, 230, 0.5) 0%, rgba(255, 73, 117, 0.5) 96.56%);
       border-radius: 1em 1em 0 0">
       <img src="/img/icon-calendar.svg">

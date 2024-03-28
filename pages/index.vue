@@ -98,17 +98,15 @@
     </div>
   </div>
   <div class="py-20" style="background: #212435; color: #fff;">
-    <div class="mx-auto mt-5" style="max-width: 1150px">
-      <div class="flex justify-between">
-        <h2 class="text-6xl font-bold">Available Workshops</h2>
-        <ButtonGreen class="text-sm px-10">
-          See all the workshops
-        </ButtonGreen>
-      </div>
-      <div class="overflow-auto my-20">
-        <div class="flex gap-10 items-stretch" style="width: fit-content;">
-          <WorkshopCard v-for="workshop,i in workshops" :key="i" v-bind="workshop" />
-        </div>
+    <div class="flex justify-between" style="margin: 0 6em;">
+      <h2 class="text-6xl font-bold">Available Workshops</h2>
+      <ButtonGreen class="text-sm px-10">
+        See all the workshops
+      </ButtonGreen>
+    </div>
+    <div class="my-20" style="padding-left: 6em;">
+      <div class="flex gap-10 items-stretch overflow-hidden" v-dragscroll style="padding-right: 6em">
+        <WorkshopCard class="shrink-0" v-for="workshop, i in workshops" :key="i" v-bind="workshop" />
       </div>
     </div>
   </div>
