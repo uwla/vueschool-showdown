@@ -1,0 +1,79 @@
+@media screen and (max-width: 999px) {
+  footer {
+    display: block;
+  }
+
+  .sitemap-desktop {
+    display: none;
+  }
+
+  .footer-banner {
+    text-align: center;
+  }
+
+  .footer-logo {
+    justify-content: center;
+  }
+
+  .social-media-links {
+    justify-content: center;
+    gap: 3em;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .sitemap {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 999px) {
+  .sitemap {
+    display: grid;
+    grid-template-areas:
+      "products corporate connect-with-us"
+      "events resources pricing";
+    margin-top: 5em;
+    font-size: 120%;
+    grid-column-gap: 3em;
+    grid-row-gap: 3em;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sitemap {
+    display: none;
+  }
+
+  .sitemap-desktop {
+    display: flex;
+    gap: 6em;
+  }
+
+  .sitemap-desktop > div {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+  }
+
+  .social-media-links {
+    justify-content: space-between;
+  }
+}
+
+footer {
+  background: #212435;
+  color: #fff;
+  gap: 10em;
+  padding: 6em 8em;
+}

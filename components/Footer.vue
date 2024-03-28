@@ -1,35 +1,35 @@
 <template>
-  <footer class="grid grid-cols-2" style="background: #212435; color: #fff; gap: 10em; padding: 6em 8em;">
-    <div>
-      <Logo class="text-4xl" style="height: 90px" />
+  <footer class="grid grid-cols-2">
+    <div class="footer-banner">
+      <Logo class="text-4xl footer-logo" style="height: 90px" />
       <div style="margin: 4em 0;">
         Thanks to fine people like you, Vue School can proudly sponsor Evan and the
         future of Vue.js by being a Platinum Patreon
       </div>
       <div>
-        <span style="color: rgba(115, 123, 152, 1); font-size: 22px;">
+        <h3 style="color: rgba(115, 123, 152, 1); font-size: 22px;">
           FOLLOW US IN SOCIAL MEDIA
-        </span>
-        <div class="flex justify-between my-8">
-          <social-media-icon
-            v-for="brandName, i in socialMediaList" :key="i"
-            :icon="brandName" />
+        </h3>
+        <div class="flex my-8 social-media-links">
+          <social-media-icon v-for="brandName, i in socialMediaList" :key="i" :icon="brandName" />
         </div>
       </div>
     </div>
-    <div class="grid grid-cols-2">
-      <div class="flex flex-col gap-10">
-        <footer-links v-for="info, i in siteInfo.slice(0, 3)" :key="i" v-bind="info" />
-      </div>
-      <div class="flex flex-col gap-10">
-        <footer-links v-for="info, i in siteInfo.slice(3)" :key="i" v-bind="info" />
-      </div>
+    <div class="sitemap-desktop">
+      <div><footer-links v-for="info, i in siteInfo.slice(0, 3)" :key="i" v-bind="info" /></div>
+      <div><footer-links v-for="info, i in siteInfo.slice(3)" :key="i" v-bind="info" /></div>
+    </div>
+    <div class="sitemap">
+      <footer-links v-for="info, i in siteInfo" :key="i" v-bind="info"
+        :style="`grid-area: ${toKebab(info.title)};`" />
     </div>
   </footer>
 </template>
 
 <script setup>
 const socialMediaList = ['facebook', 'twitter', 'github', 'linkedin', 'youtube'];
+
+const toKebab = (str) => str.replaceAll(' ', '-').toLowerCase();
 
 const siteInfo = [
   {
@@ -82,3 +82,5 @@ const siteInfo = [
   },
 ]
 </script>
+
+<style scoped src="./Footer.css"></style>
