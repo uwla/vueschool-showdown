@@ -2,14 +2,7 @@
   <nav class="flex justify-between px-12 py-5" style="background: #212435; color: #fff">
     <Logo class="text-lg" style="height: 56px;" />
     <div class="flex gap-5 items-center">
-      <Dropdown title="Courses" :items="['Course 1', 'Course 2']" />
-      <a href="#">Plans</a>
-      <Dropdown title="Business service" :items="['Service 1', 'Service 2']" />
-      <a href="#">Learning Paths</a>
-      <a href="#">Hiring</a>
-      <a href="#">Articles</a>
-      <Dropdown title="Events" :items="['Event 1', 'Event 2']" />
-      <a href="#">Get Certified</a>
+      <NavBarLinks />
     </div>
     <div class="flex gap-7">
       <button>Login</button>

@@ -1,0 +1,36 @@
+#hero-banner {
+  background: #212435;
+  color: #fff;
+  padding: 3em 2em 0 8em;
+}
+
+#course-metrics {
+  background: linear-gradient(to bottom, #233242, #212435);
+}
+
+#corporate-training-info {
+  background: url("/img/curve-2.svg"), url("/img/curve-1.svg"), #212435;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 100%, 100%, 100%;
+  padding: 9em 0 2em 0;
+  margin-top: -3em;
+}
+
+#training-bundle {
+  background: url("/img/curve-2.svg"), url("/img/curve-1.svg"), #212435;
+  background-size: 100%, 100%, 100%;
+  background-position: center, bottom, top;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  padding-top: 5em;
+}
+
+#training-bundle h1 {
+  font-size: 60px;
+  margin-bottom: 2.5em;
+  line-height: 1.2;
+}
+
+#workshops {
+  background: #212435;
+  color: #fff;
+}

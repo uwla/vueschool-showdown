@@ -32,6 +32,9 @@ body {
   background: #0bd88f;
 }
 
+.grey {
+  color: rgb(160, 168, 195);
+}
 
 .wmax-1100 {
   max-width: 1100px;

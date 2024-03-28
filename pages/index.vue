@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-2 items-center gap-14" style="background: #212435; color: #fff; padding: 3em 2em 0 8em">
+  <div class="grid grid-cols-2 items-center gap-14" id="hero-banner">
     <div>
       <h2 class="font-bold" style="font-size: 60px; line-height: 1.25;">
         Complete <span class="green">Vue.js training</span> solutions for
@@ -16,9 +16,7 @@
     </div>
     <img src="/img/people.png" alt="People using Vue">
   </div>
-  <div style="background: url('/img/curve-2.svg'), url('/img/curve-1.svg'), linear-gradient(to bottom, #212435, #233444);
-      background-repeat: no-repeat, no-repeat, no-repeat; background-size: 100%, 100%, 100%;
-      padding: 9em 0 2em 0; margin-top: -3em;">
+  <div id="corporate-training-info">
     <div class="flex white py-14 px-7 gap-7 justify-center items-center mx-auto wmax-1200"
       style="background: #2a2f43; border-radius: 1em;">
       <Logo class="mx-14 shrink-0" :showText="false" />
@@ -33,15 +31,12 @@
       </div>
     </div>
     <div class="flex justify-between wmax-1200 mx-auto mt-14 ">
-      <a href="#"><img src="/img/icon-google-grey.svg" alt="Google"></a>
-      <a href="#"><img src="/img/icon-google-grey.svg" alt="Google"></a>
-      <a href="#"><img src="/img/icon-google-grey.svg" alt="Google"></a>
-      <a href="#"><img src="/img/icon-google-grey.svg" alt="Google"></a>
-      <a href="#"><img src="/img/icon-google-grey.svg" alt="Google"></a>
-      <a href="#"><img src="/img/icon-google-grey.svg" alt="Google"></a>
+      <a href="#" v-for="i in [1, 2, 3, 4, 5, 6]" :key="i">
+        <img src="/img/icon-google-grey.svg" alt="Google">
+      </a>
     </div>
   </div>
-  <div class="pt-20 pb-10" style="background: linear-gradient(to bottom, #254551, #212435);">
+  <div class="pt-20 pb-10" id="course-metrics">
     <div class="grid grid-cols-2 wmax-1200 mx-auto white gap-5 my-10">
       <div>
         <h3 class="green-to-aqua" style="font-size: 22px;">
@@ -52,61 +47,37 @@
         </h2>
       </div>
       <div class="flex justify-between items-center">
-        <div class="flex flex-col items-center gap-3">
-          <span class="green-to-aqua text-8xl font-semibold">763</span>
-          <span class="flex gap-2">
-            <img src="/img/icon-video.svg" alt="video">
-            Video lessons
-          </span>
-        </div>
-        <div class="flex flex-col items-center gap-3">
-          <span class="green-to-aqua text-8xl font-semibold">40</span>
-          <span class="flex gap-2">
-            <img src="/img/icon-book.svg" alt="video">
-            Courses
-          </span>
-        </div>
-        <div class="flex flex-col items-center gap-3">
-          <span class="green-to-aqua text-8xl font-semibold">64</span>
-          <span class="flex gap-2">
-            <img src="/img/icon-clock.svg" alt="video">
-            15 hours
-          </span>
-        </div>
+        <course-metrics title="763" subtitle="Video lessons" icon="video" />
+        <course-metrics title="40" subtitle="Courses" icon="book" />
+        <course-metrics title="64" subtitle="15 hours" icon="clock" />
       </div>
     </div>
   </div>
-  <div class="white py-5" style="background: url('/img/curve-2.svg'), url('/img/curve-1.svg'),  #212435;
-      background-size: 100%, 100%, 100%; background-position: center, bottom, top;
-      background-repeat: no-repeat, no-repeat, no-repeat; padding-top: 5em;
-    ">
-    <h1 class="font-bold text-center" style="font-size: 60px; margin-bottom: 2.5em; line-height: 1.2;">
+  <div class="white py-5" id="training-bundle">
+    <h1 class="font-bold text-center">
       Discounted <span class="aqua">Corporate</span> <br> <span class="green-to-aqua">Training</span> Bundles
     </h1>
     <div class="flex justify-center gap-8 items-start">
-      <ProductPlan v-bind="basicPlan" />
-      <ProductPlan v-bind="professionalPlan">
-        <div class="flex items-center py-3 px-5 gap-3" style="background: #245355; border-radius: .7em">
-          <img src="/img/vue3-masterclass-course.png">
-          <div class="font-semibold" style="line-height: 1.5">
-            <span style="color: rgb(160, 168, 195)">Enough time to watch:</span><br>
-            <span class="text-lg">The Vue3 Masterclass</span>
-          </div>
-        </div>
-      </ProductPlan>
-      <ProductPlan v-bind="basicPlan2" />
+      <product-plan v-bind="basicPlan" />
+      <product-plan v-bind="professionalPlan">
+        <course-card-preview imgUrl="/img/vue3-masterclass-course.png">
+          <span class="grey">Enough time to watch:</span><br>
+          <span class="text-lg">The Vue3 Masterclass</span>
+        </course-card-preview>
+      </product-plan>
+      <product-plan v-bind="basicPlan2" />
     </div>
   </div>
-  <div class="py-20" style="background: #212435; color: #fff;">
+  <div class="py-20" id="workshops">
     <div class="flex justify-between" style="margin: 0 6em;">
       <h2 class="text-6xl font-bold">Available Workshops</h2>
-      <ButtonGreen class="text-sm px-10">
+      <button-green class="text-sm px-10">
         See all the workshops
-      </ButtonGreen>
+      </button-green>
     </div>
     <div class="my-20" style="padding-left: 6em;">
       <div class="flex gap-10 items-stretch overflow-hidden" v-dragscroll style="padding-right: 6em">
-        <WorkshopCard class="shrink-0" v-for="workshop, i in workshops" :key="i" v-bind="workshop" />
+        <workshop-card v-for="workshop, i in workshops" :key="i" v-bind="workshop" class="shrink-0" />
       </div>
     </div>
   </div>
@@ -185,3 +156,5 @@ const workshops = [
   },
 ]
 </script>
+
+<style src="./index.css"></style>

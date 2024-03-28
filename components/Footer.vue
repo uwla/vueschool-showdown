@@ -1,8 +1,7 @@
 <template>
-  <footer class="grid grid-cols-2"
-    style="background: #212435; color: #fff; gap: 10em; padding: 6em 8em;">
+  <footer class="grid grid-cols-2" style="background: #212435; color: #fff; gap: 10em; padding: 6em 8em;">
     <div>
-      <Logo class="text-4xl" style="height: 90px"/>
+      <Logo class="text-4xl" style="height: 90px" />
       <div style="margin: 4em 0;">
         Thanks to fine people like you, Vue School can proudly sponsor Evan and the
         future of Vue.js by being a Platinum Patreon
@@ -12,27 +11,25 @@
           FOLLOW US IN SOCIAL MEDIA
         </span>
         <div class="flex justify-between my-8">
-            <SocialMediaIcon icon="facebook" />
-            <SocialMediaIcon icon="twitter" />
-            <SocialMediaIcon icon="github" />
-            <SocialMediaIcon icon="linkedin" />
-            <SocialMediaIcon icon="youtube" />
+          <social-media-icon
+            v-for="brandName, i in socialMediaList" :key="i"
+            :icon="brandName" />
         </div>
       </div>
     </div>
     <div class="grid grid-cols-2">
       <div class="flex flex-col gap-10">
-        <FooterLinks v-for="info, i in siteInfo.slice(0,3)" :key="i" v-bind="info" />
+        <footer-links v-for="info, i in siteInfo.slice(0, 3)" :key="i" v-bind="info" />
       </div>
       <div class="flex flex-col gap-10">
-        <FooterLinks v-for="info, i in siteInfo.slice(3)" :key="i" v-bind="info" />
+        <footer-links v-for="info, i in siteInfo.slice(3)" :key="i" v-bind="info" />
       </div>
     </div>
-
   </footer>
 </template>
 
 <script setup>
+const socialMediaList = ['facebook', 'twitter', 'github', 'linkedin', 'youtube'];
 
 const siteInfo = [
   {
