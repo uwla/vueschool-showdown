@@ -43,6 +43,6 @@ const props = {
 }
 
 export default {
-  props
+  props,
 }
 </script>

@@ -9,5 +9,7 @@ export default defineNuxtConfig({
     "@fontsource/rubik/600.css",
     "@fontsource/rubik/700.css",
     "@fontsource/rubik/800.css",
+    "vue-slider-component/theme/default.css",
   ],
+  plugins: [{ src: "~/plugins/vue-slider.ts", mode: "client" }],
 });

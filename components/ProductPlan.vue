@@ -32,13 +32,21 @@
       </div>
       <div>
         <span class="font-bold mb-5 block" style="font-size: 130%">How many licenses do you need?</span>
-        <input type="range" min="5" max="20" value="12">
+        <client-only>
+          <vue-slider
+          min="5" max="20"
+            :processStyle="{ backgroundColor: '#0bd88f' }"
+            :dotStyle="{ color: '#0bd88f' }"
+            :tooltipStyle="{ backgroundColor: '#0bd88f', color: '#fff' }"
+            v-model="value"
+          />
+        </client-only>
       </div>
       <div class="grid grid-cols-2 items-center text-xl mt-4">
           <div class="flex items-center justify-center gap-2 p-2"
             style="background: #1d202e; border-radius: .5em;">
             <img src="/img/icon-people.svg">
-            <span class="text-2xl font-bold">12</span>
+            <span class="text-2xl font-bold">{{ value }}</span>
             <span class="text-sm" style="color: rgb(160, 168, 195)">seats</span>
           </div>
           <div class="text-center green">
@@ -67,6 +75,7 @@ const props = {
 };
 
 export default {
-  props
+  data:() => ({ value: 12 }),
+  props,
 }
 </script>
