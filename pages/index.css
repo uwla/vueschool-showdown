@@ -13,6 +13,9 @@
     padding: 4em;
     text-align: center;
   }
+  #hero-banner p {
+    padding-right: 0;
+  }
 }
 
 @media screen and (min-width: 1050px) {
@@ -32,6 +35,60 @@
   margin-top: -3em;
 }
 
+.corporate-training-about h2 {
+  font-size: 35px;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 699px) {
+  #corporate-training > div {
+    flex-direction: column;
+    align-items: center;
+  }
+  #corporate-training h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  #corporate-training > div {
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #corporate-training {
+    padding-bottom: 5em;
+  }
+
+  #corporate-training > div {
+    padding-top: 2em;
+  }
+
+  #corporate-training .logo {
+    margin: 0.5em;
+    width: 100px;
+  }
+
+  .corporate-training-about p {
+    font-size: 20px;
+  }
+
+  .featured-companies {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .featured-companies {
+    display: flex;
+  }
+
+  .corporate-training-about p {
+    font-size: 22px;
+  }
+}
+
 /* courses' metrics */
 
 #course-metrics {
@@ -47,13 +104,21 @@
     max-width: 700px;
     text-align: center;
   }
-
-  #corporate-training {
-    padding-bottom: 5em;
+  #course-metrics h3 {
+    font-size: 110%;
   }
 
-  .featured-companies {
-    display: none;
+  #course-metrics h2 {
+    margin: 0.25em 0 0.4em 0;
+  }
+
+  #course-metrics .course-metrics-list {
+    justify-content: center;
+    gap: 4em;
+  }
+
+  .course-metrics-list {
+    white-space: nowrap;
   }
 }
 
@@ -61,10 +126,6 @@
   #course-metrics > div {
     display: grid;
     max-width: 1200px;
-  }
-
-  .featured-companies {
-    display: flex;
   }
 }
 
@@ -94,6 +155,10 @@
     width: 100%;
     padding: 4em 3em;
   }
+
+  #training-bundle h1 {
+    margin-bottom: 1em;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -104,6 +169,10 @@
   #training-bundle .product-plan {
     width: 25%;
   }
+
+  #training-bundle h1 {
+    margin-bottom: 2.5em;
+  }
 }
 
 /* workshops */
@@ -113,10 +182,11 @@
   color: #fff;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1050px) {
   #workshops {
     justify-content: center;
     gap: 4em;
+    padding-left: 2em;
   }
 
   #workshops div {
@@ -125,5 +195,10 @@
 
   #workshops .call-to-action {
     order: 3;
+  }
+
+  #workshops > h2 {
+    text-align: center;
+    margin-right: 1em;
   }
 }

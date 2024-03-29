@@ -19,8 +19,8 @@
       style="background: #2a2f43; border-radius: 1em;">
       <Logo class="mx-14 shrink-0" :showText="false" />
       <div class="corporate-training-about">
-        <h2 class="font-bold mb-4" style="font-size: 35px;">About Vue School corporate training</h2>
-        <p style="font-size: 22px;">
+        <h2 class="font-bold mb-4">About Vue School corporate training</h2>
+        <p>
           School is the #1 training resource for Vue.js and has provided the
           most comprehensive Vue.js video library in the world to over 140,000
           developers. Private individuals and small to enterprise companies have
@@ -44,7 +44,7 @@
           Full Stack <span class="aqua">Vue</span> <span class="green-to-aqua">Training</span> Solutions
         </h2>
       </div>
-      <div class="flex justify-between items-center">
+      <div class="flex justify-between items-center course-metrics-list">
         <course-metrics title="763" subtitle="Video lessons" icon="video" />
         <course-metrics title="40" subtitle="Courses" icon="book" />
         <course-metrics title="64" subtitle="15 hours" icon="clock" />

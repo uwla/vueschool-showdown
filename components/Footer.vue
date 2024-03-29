@@ -2,7 +2,7 @@
   <footer class="grid grid-cols-2">
     <div class="footer-banner">
       <Logo class="text-4xl footer-logo" style="height: 90px" />
-      <div style="margin: 4em 0;">
+      <div class="sponsor-msg" >
         Thanks to fine people like you, Vue School can proudly sponsor Evan and the
         future of Vue.js by being a Platinum Patreon
       </div>
@@ -11,7 +11,7 @@
           FOLLOW US IN SOCIAL MEDIA
         </h3>
         <div class="flex my-8 social-media-links">
-          <social-media-icon v-for="brandName, i in socialMediaList" :key="i" :icon="brandName" />
+          <social-media-icon class="shrink-0" v-for="brandName, i in socialMediaList" :key="i" :icon="brandName" />
         </div>
       </div>
     </div>
