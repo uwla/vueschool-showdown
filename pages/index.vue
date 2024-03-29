@@ -150,5 +150,3 @@ const workshops = [
   },
 ]
 </script>
-
-<style src="./index.css"></style>

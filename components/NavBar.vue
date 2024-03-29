@@ -12,5 +12,3 @@
     </div>
   </nav>
 </template>
-
-<style src="./NavBar.css"></style>

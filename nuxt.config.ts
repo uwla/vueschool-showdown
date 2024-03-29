@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss"],
   css: [
+    "~/assets/css/navbar.css",
+    "~/assets/css/homepage.css",
+    "~/assets/css/footer.css",
     "~/assets/css/app.css",
     "@fontsource/rubik/400.css",
     "@fontsource/rubik/500.css",

@@ -83,4 +83,3 @@ const siteInfo = [
 ]
 </script>
 
-<style scoped src="./Footer.css"></style>
