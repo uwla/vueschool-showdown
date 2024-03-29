@@ -6,6 +6,8 @@
 .cache
 dist
 
+*.pdf
+
 # Node dependencies
 node_modules
 

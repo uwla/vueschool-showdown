@@ -4,14 +4,19 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --port 8080",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@fontsource/rubik": "^5.0.19",
+    "@nuxtjs/tailwindcss": "^6.11.4",
     "nuxt": "^3.11.1",
+    "v-dropdown-menu": "^2.0.4",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-dragscroll": "^4.0.5",
+    "vue-router": "^4.3.0",
+    "vue-slider-component": "^4.1.0-beta.7"
   }
 }
