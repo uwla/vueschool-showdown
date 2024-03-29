@@ -92,9 +92,58 @@
 /* courses' metrics */
 
 #course-metrics {
-  background: linear-gradient(to bottom, #233242, #212435);
   padding-left: 4em;
   padding-right: 4em;
+}
+
+.course-metrics-list {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 620px) {
+  #course-metrics .course-metric-val {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  #course-metrics {
+    background: linear-gradient(to bottom, #212435, #223343, #212435);
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1000px) {
+  #course-metrics {
+    background: linear-gradient(to bottom, #222c3d, #212435);
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1150px) {
+  #course-metrics {
+    background: #212435
+  }
+}
+
+@media screen and (min-width: 1151px) and (max-width: 1250px) {
+  #course-metrics {
+    background: linear-gradient(to bottom, #222b3b, #212435);
+  }
+}
+
+@media screen and (min-width: 1251px) and (max-width: 1400px) {
+  #course-metrics {
+    background: linear-gradient(to bottom, #223040, #212435);
+  }
+}
+@media screen and (min-width: 1401px) and (max-width: 1530px) {
+  #course-metrics {
+    background: linear-gradient(to bottom, #223544, #212435);
+  }
+}
+@media screen and (min-width: 1531px) {
+  #course-metrics {
+    background: linear-gradient(to bottom, #223847, #212435);
+  }
 }
 
 @media screen and (max-width: 1099px) {
@@ -115,10 +164,6 @@
   #course-metrics .course-metrics-list {
     justify-content: center;
     gap: 4em;
-  }
-
-  .course-metrics-list {
-    white-space: nowrap;
   }
 }
 
@@ -145,10 +190,40 @@
   line-height: 1.2;
 }
 
+
+@media screen and  (max-width: 600px) {
+  #training-bundle .product-plans {
+    padding: 0 2em;
+  }
+ #training-bundle .product-plan-license {
+    font-size: 150%;
+  }
+  #training-bundle .product-plan-discount {
+    font-size: 200% ;
+  }
+}
+
+@media screen and (max-width: 899px) {
+ #training-bundle .call-to-action {
+    font-size: 160%;
+  }
+}
+
+@media screen and (min-width: 900px) {
+ #training-bundle .call-to-action {
+    font-size: 130%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 899px) {
+  #training-bundle .product-plans {
+    padding: 0 5em;
+  }
+}
+
 @media screen and (max-width: 899px) {
   #training-bundle .product-plans {
     flex-direction: column;
-    padding: 0 5em;
   }
 
   #training-bundle .product-plan {
@@ -158,6 +233,12 @@
 
   #training-bundle h1 {
     margin-bottom: 1em;
+  }
+
+  #training-bundle .product-plan-discount {
+    display: flex;
+    justify-content: start;
+    gap: 1em;
   }
 }
 

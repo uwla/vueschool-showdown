@@ -27,8 +27,12 @@
 
 @media screen and (max-width: 599px) {
   .sitemap {
-    display: flex;
-    flex-direction: column;
+    margin-top: 3em;
+    font-size: 120%;
+    display: grid;
+    grid-template-areas:
+      "products" "corporate" "connect-with-us"
+      "events" "resources" "pricing";
     gap: 3em;
     align-items: center;
     text-align: center;
@@ -103,6 +107,7 @@ footer {
     padding-left: 4em;
   }
 }
+
 @media screen and (max-width: 799px) {
   footer {
     padding-right: 4em;

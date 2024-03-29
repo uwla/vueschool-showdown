@@ -2,7 +2,7 @@
   <div class="flex items-center gap-6 logo">
     <img src="/img/logo.svg" alt="VueSchool logo"
     style="max-width: 100%; max-height: 100%;">
-    <a href="" class="w-min font-bold" v-if="showText">
+    <a href="" class="w-min font-bold" v-if="showText" style="text-align: left;">
       Vue School.io
     </a>
   </div>

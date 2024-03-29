@@ -1,5 +1,5 @@
 <template>
-  <footer class="grid grid-cols-2">
+  <footer class="grid-cols-2">
     <div class="footer-banner">
       <Logo class="text-4xl footer-logo" style="height: 90px" />
       <div class="sponsor-msg" >
