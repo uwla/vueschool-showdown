@@ -1,75 +1,35 @@
-# Nuxt 3 Minimal Starter
+# Vue School Showdown
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Vue School showdown website at <https://vueschool-showdown.vercel.app>.
 
-## Setup
+## Instructions for the administrator
 
-Make sure to install the dependencies:
+The tutorial below provides instructions on how to use the CMS to change the content of the website.
+
+https://github.com/uwla/vueschool-showdown/assets/47862859/fb0d92cb-81d6-4d4a-80ce-7d4406c806fe
+
+## Local development
+
+Install the dependencies:
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+Start the development server on `http://localhost:8080`:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
 
 Build the application for production:
 
 ```bash
-# npm
 npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
 
 ```bash
-# npm
 npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
