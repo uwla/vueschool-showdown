@@ -1,7 +1,7 @@
 <template>
-  <div class="flex items-center py-3 px-5 gap-3" style="background: #245355; border-radius: .7em">
+  <div class="course-card-preview flex items-center py-3 px-5 gap-3">
     <img :src="imgUrl" alt="Course image">
-    <div class="font-semibold" style="line-height: 1.5">
+    <div class="font-semibold line-height-1-5">
       <slot></slot>
 
     </div>

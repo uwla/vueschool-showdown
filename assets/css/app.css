@@ -2,6 +2,15 @@ body {
   font-family: Rubik, "Open Sans", sans-serif;
 }
 
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.logo a {
+  text-align: left !important;
+}
+
 .white {
   color: #fff;
 }
@@ -35,6 +44,49 @@ body {
 .grey {
   color: rgb(160, 168, 195);
 }
+.grey-2 {
+  color: rgb(115, 123, 152);
+}
+
+.border-radius-max {
+  border-radius: 999px;
+}
+.border-radius-2 {
+  border-radius: 2em;
+}
+.border-radius-1 {
+  border-radius: 1em;
+}
+.border-radius-half {
+  border-radius: 0.5em;
+}
+
+.line-height-1 {
+  line-height: 1;
+}
+.line-height-1-25 {
+  line-height: 1.25;
+}
+.line-height-1-5 {
+  line-height: 1.5;
+}
+
+.font-14px {
+  font-size: 14;
+}
+.font-22px {
+  font-size: 22px;
+}
+.font-60px {
+  font-size: 60px;
+}
+
+.font-130 {
+  font-size: 130%;
+}
+.font-80 {
+  font-size: 80%;
+}
 
 .nowrap {
   white-space: nowrap;
@@ -56,19 +108,20 @@ body {
   white-space: nowrap;
 }
 
-button, .v-dropdown-menu__trigger {
+button,
+.v-dropdown-menu__trigger {
   cursor: pointer;
 }
 
 .v-dropdown-menu__trigger::after {
-    display: inline-block;
-    margin-left: 0.255em;
-    vertical-align: 0.255em;
-    content: "";
-    border-top: 0.3em solid;
-    border-right: 0.3em solid transparent;
-    border-bottom: 0;
-    border-left: 0.3em solid transparent;
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
 }
 
 .v-dropdown-menu__container {
@@ -86,4 +139,64 @@ button, .v-dropdown-menu__trigger {
 
 .tooltip > .v-dropdown-menu__trigger::after {
   display: none;
+}
+
+.workshop-card {
+  width: 580px;
+}
+
+.workshop-card-header {
+  background: linear-gradient(
+    90deg,
+    rgba(79, 8, 230, 0.5) 0%,
+    rgba(255, 73, 117, 0.5) 96.56%
+  );
+  border-radius: 1em 1em 0 0;
+}
+
+.workshop-card-body {
+  background: #242e42;
+  border-radius: 0 0 1em 1em;
+}
+
+.product-plan {
+  background: #293246;
+}
+
+.product-plan-subcard {
+  background: #212435;
+}
+
+.product-plan-discount > div:first-child {
+  background: #1d202e;
+  border-radius: 0.5em;
+}
+
+.social-media-icon {
+  background: #2b2f44;
+  height: 60px;
+  width: 60px;
+}
+
+.course-card-preview {
+  background: #245355;
+  border-radius: 0.7em;
+}
+
+.btn-green {
+  border-radius: 0.5em;
+  color: rgba(33, 36, 53, 1);
+}
+
+.signup-button {
+  padding: 2px;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 10px;
+  background: linear-gradient(95.39deg, #0bd88f 0%, #00c2ff 100%);
+}
+
+.signup-button span {
+  background: rgba(33, 36, 53, 0.9);
+  border-radius: 10px;
 }

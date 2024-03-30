@@ -1,3 +1,14 @@
+#navbar {
+  background: #212435;
+  color: #fff;
+}
+
+#navbar .logo {
+  height: 56px;
+}
+
+/* navbar menu */
+
 @media screen and (max-width: 1250px) {
   .hide-md {
     display: none;
@@ -15,8 +26,6 @@
     display: none !important;
   }
 }
-
-/* navbar menu */
 
 .navbar-menu > .v-dropdown-menu__trigger::after {
   display: none;

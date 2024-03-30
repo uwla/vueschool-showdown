@@ -1,6 +1,5 @@
 <template>
-  <a href="#" class="rounded-full flex items-center justify-center"
-  style="background: #2b2f44; height: 60px; width: 60px;">
+  <a href="#" class="social-media-icon rounded-full flex items-center justify-center">
     <img :src="`/img/icon-${icon}.svg`" alt="Icon">
   </a>
 </template>

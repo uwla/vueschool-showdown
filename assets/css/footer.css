@@ -93,6 +93,20 @@
   }
 }
 
+.sitemap h3,
+.sitemap-desktop h3 {
+  color: rgba(115, 123, 152, 1);
+}
+
+.footer-social-media h3 {
+  color: rgba(115, 123, 152, 1);
+  font-size: 22px;
+}
+
+.footer-logo {
+  height: 90px;
+}
+
 footer {
   background: #212435;
   color: #fff;

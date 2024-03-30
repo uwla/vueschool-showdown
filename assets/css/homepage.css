@@ -35,6 +35,10 @@
   margin-top: -3em;
 }
 
+.corporate-training-about {
+  background: #2a2f43;
+}
+
 .corporate-training-about h2 {
   font-size: 35px;
   line-height: 1.2;
@@ -120,7 +124,7 @@
 
 @media screen and (min-width: 1001px) and (max-width: 1150px) {
   #course-metrics {
-    background: #212435
+    background: #212435;
   }
 }
 
@@ -190,26 +194,26 @@
   line-height: 1.2;
 }
 
-@media screen and  (max-width: 600px) {
+@media screen and (max-width: 600px) {
   #training-bundle .product-plans {
     padding: 0 2em;
   }
- #training-bundle .product-plan-license {
+  #training-bundle .product-plan-license {
     font-size: 150%;
   }
   #training-bundle .product-plan-discount {
-    font-size: 200% ;
+    font-size: 200%;
   }
 }
 
 @media screen and (max-width: 899px) {
- #training-bundle .call-to-action {
+  #training-bundle .call-to-action {
     font-size: 160%;
   }
 }
 
 @media screen and (min-width: 900px) {
- #training-bundle .call-to-action {
+  #training-bundle .call-to-action {
     font-size: 130%;
   }
 }

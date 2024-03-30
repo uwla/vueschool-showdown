@@ -1,5 +1,5 @@
 <template>
-  <button class="bg-green p-4 font-semibold" style="border-radius: .5em; color: rgba(33, 36, 53, 1)">
+  <button class="bg-green p-4 font-semibold btn-green">
     <slot></slot>
   </button>
 </template>
