@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/sanity"],
   css: [
     "~/assets/css/navbar.css",
     "~/assets/css/homepage.css",
@@ -16,4 +16,9 @@ export default defineNuxtConfig({
     "v-dropdown-menu/css",
   ],
   plugins: [{ src: "~/plugins/vue-slider.ts", mode: "client" }],
+  sanity: {
+    projectId: "xrbzblpe",
+    dataset: "production",
+    useCdn: false
+  },
 });

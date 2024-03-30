@@ -6,18 +6,19 @@
     </h3>
     <span class="green">Includes 1 year access to:</span>
     <div class="flex flex-col gap-3 my-4">
-      <span class="flex gap-3 items-center w-full" v-for="feat, i in active" :key="i">
+      <span class="flex gap-3 items-center w-full" v-for="feat, i in features" :key="i">
         <img src="/img/icon-check.svg" alt="Checked">
-        <span class="grow">{{ feat.label }}</span>
-        <img src="/img/icon-info.svg" alt="Info">
+        <span class="grow">{{ feat.name }}</span>
+        <tooltip-info :info="feat.info" />
       </span>
-      <span class="flex gap-3 items-center w-full" v-for="feat, i in activeBold" :key="i">
+      <span class="flex gap-3 items-center w-full" v-for="feat, i in topFeatures" :key="i">
         <img src="/img/icon-check.svg" alt="Checked">
-        <span class="grow font-bold">{{ feat.label }}</span>
+        <span class="grow font-bold">{{ feat.name }}</span>
+        <tooltip-info :info="feat.info" />
       </span>
-      <span class="flex gap-3 items-center" style="opacity: 0.25" v-for="feat, i in inactive" :key="i">
+      <span class="flex gap-3 items-center" style="opacity: 0.25" v-for="feat, i in inactiveFeatures" :key="i">
         <img src="/img/icon-x.svg" alt="Unchecked">
-        <span class="grow">{{ feat.label }}</span>
+        <span class="grow">{{ feat.name }}</span>
       </span>
     </div>
     <slot></slot>
@@ -61,9 +62,9 @@
 <script>
 const props = {
   title: String,
-  active: Array,
-  activeBold: Array,
-  inactive: Array,
+  features: Array,
+  topFeatures: Array,
+  inactiveFeatures: Array,
   icon: String,
 };
 

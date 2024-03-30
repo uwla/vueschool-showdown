@@ -2,15 +2,16 @@
   <div class="grid-cols-2 items-center gap-14" id="hero-banner">
     <div>
       <h2 class="font-bold" style="font-size: 60px; line-height: 1.25;">
-        Complete <span class="green">Vue.js training</span> solutions for
-        companies
+        {{ bannerTitle.split(bannerTitleHighlighted).at(0) }}
+        <span class="green">{{ bannerTitleHighlighted }}</span>
+        {{ bannerTitle.split(bannerTitleHighlighted).at(1) }}
       </h2>
       <p class="my-10 pr-12" style="font-size: 22px; line-height: 30px;">
-        Training solutions designed for companies, agencies and organisations
-        with developers using or who are considering using the Vue.js
-        framework
+        {{ bannerText }}
       </p>
-      <ButtonGreen class="px-10 call-to-action">Talk to sales</ButtonGreen>
+      <ButtonGreen class="px-10 call-to-action">
+        {{ bannerButtonText }}
+      </ButtonGreen>
     </div>
     <img src="/img/people.png" alt="People using Vue">
   </div>
@@ -45,9 +46,9 @@
         </h2>
       </div>
       <div class="flex justify-between items-center course-metrics-list">
-        <course-metrics title="763" subtitle="Video lessons" icon="video" />
-        <course-metrics title="40" subtitle="Courses" icon="book" />
-        <course-metrics title="64" subtitle="15 hours" icon="clock" />
+        <course-metrics :value="metrics.videos" subtitle="Video lessons" icon="video" />
+        <course-metrics :value="metrics.courses" subtitle="Courses" icon="book" />
+        <course-metrics :value="metrics.hours" subtitle="15 Hours" icon="clock" />
       </div>
     </div>
   </div>
@@ -78,47 +79,32 @@
 </template>
 
 <script setup>
-const basicPlan = {
-  title: 'Basic',
-  icon: 'leaf',
-  active: [
-    { label: 'All Video Courses' },
-    { label: 'Vue.Js Master Classes' },
-    { label: 'Developer assist Slack channel' },
-  ],
-  inactive: [
-    { label: 'Live Weekly QnA' },
-    { label: '1 x ws ticker per license' },
-  ]
-}
+const query = groq`{
+  "products": *[_type == "product"]{
+    title,
+    label,
+    features[]-> {name, info},
+    topFeatures[]-> {name, info},
+    inactiveFeatures[]-> {name, info},
+  },
+  "settings": *[_type == "settings"]{bannerText, bannerTitle, bannerTitleHighlighted, bannerButtonText},
+  "metrics": *[_type == "metrics"]{courses,videos,hours}
+}`
 
-const professionalPlan = {
-  title: 'Professional',
-  icon: 'rocket',
-  active: [
-    { label: 'All Video Courses' },
-    { label: 'Vue.Js Master Classes' },
-    { label: 'Developer assist Slack channel' },
-  ],
-  activeBold: [
-    { label: 'Live Weekly QnA' },
-    { label: '1 x ws ticker per license' },
-  ]
-}
+const sanity = useSanity()
 
-const basicPlan2 = {
-  title: 'Basic',
-  icon: 'thunderbolt',
-  active: [
-    { label: 'All Video Courses' },
-    { label: 'Vue.Js Master Classes' },
-    { label: 'Developer assist Slack channel' },
-    { label: 'Live Weekly QnA' },
-  ],
-  activeBold: [
-    { label: '4 x Virtual Workshop of your choice' },
-  ]
-}
+const { data } = await useAsyncData('fetchProducts', () => sanity.fetch(query));
+let { products, settings, metrics } = data._rawValue;
+
+const { bannerText, bannerTitle, bannerTitleHighlighted, bannerButtonText } = settings[0];
+metrics = metrics[0];
+
+const basicPlan = products.find(p => p.label === "basic");
+const professionalPlan = products.find(p => p.label === "pro");
+const basicPlan2 = products.find(p => p.label === "basic 2");
+basicPlan.icon = "leaf";
+professionalPlan.icon = "rocket";
+basicPlan2.icon = "thunderbolt";
 
 const workshops = [
   {

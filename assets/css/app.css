@@ -79,3 +79,11 @@ button, .v-dropdown-menu__trigger {
   width: auto;
   margin-top: 0.25em;
 }
+
+.tooltip .v-dropdown-menu__container {
+  width: max-content;
+}
+
+.tooltip > .v-dropdown-menu__trigger::after {
+  display: none;
+}
