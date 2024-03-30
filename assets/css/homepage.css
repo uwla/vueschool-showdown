@@ -45,6 +45,10 @@
 }
 
 @media screen and (max-width: 699px) {
+  #corporate-training {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
   #corporate-training > div {
     flex-direction: column;
     align-items: center;
@@ -150,6 +154,20 @@
   }
 }
 
+@media screen and (max-width: 699px) {
+  #course-metrics .course-metrics-list {
+    justify-content: center;
+    gap: 2em;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1099px) {
+  #course-metrics .course-metrics-list {
+    justify-content: center;
+    gap: 4em;
+  }
+}
+
 @media screen and (max-width: 1099px) {
   #course-metrics > div {
     display: flex;
@@ -163,11 +181,6 @@
 
   #course-metrics h2 {
     margin: 0.25em 0 0.4em 0;
-  }
-
-  #course-metrics .course-metrics-list {
-    justify-content: center;
-    gap: 4em;
   }
 }
 
@@ -194,15 +207,17 @@
   line-height: 1.2;
 }
 
+
 @media screen and (max-width: 600px) {
   #training-bundle .product-plans {
     padding: 0 2em;
   }
   #training-bundle .product-plan-license {
     font-size: 150%;
+    line-height: 1.5;
   }
   #training-bundle .product-plan-discount {
-    font-size: 200%;
+    font-size: 160%;
   }
 }
 

@@ -25,6 +25,13 @@
   }
 }
 
+@media screen and (max-width: 550px) {
+  footer {
+    padding-right: 2em;
+    padding-left: 2em;
+  }
+}
+
 @media screen and (max-width: 599px) {
   .sitemap {
     margin-top: 3em;
@@ -115,16 +122,17 @@ footer {
   padding-bottom: 6em;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 551px) and (max-width: 799px) {
   footer {
     padding-right: 4em;
     padding-left: 4em;
   }
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (min-width: 800px) {
   footer {
-    padding-right: 4em;
-    padding-left: 4em;
+    padding-right: 6em;
+    padding-left: 6em;
   }
 }
+

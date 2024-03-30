@@ -60,7 +60,7 @@
       <div
         class="grid grid-cols-2 items-center text-xl mt-4 product-plan-discount"
       >
-        <div class="flex items-center justify-center gap-2 p-2">
+        <div class="flex items-center justify-center gap-1 px-4 py-2">
           <img src="/img/icon-people.svg" />
           <span class="text-2xl font-bold">{{ value }}</span>
           <span class="text-sm grey">seats</span>
